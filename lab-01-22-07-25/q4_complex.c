@@ -69,3 +69,23 @@ int main() {
 
     return 0;
 }
+
+// Sample input output
+// Menu:
+// 1. Add two complex numbers
+// 2. Multiply two complex numbers
+// 3. Exit
+
+// Enter your choice: 1
+// Enter first complex number (real img): 1 2
+// Enter second complex number (real img): 3 4
+// Sum: 4.00 + 6.00i
+
+// Menu:
+// 1. Add two complex numbers
+// 2. Multiply two complex numbers
+// 3. Exit
+// Enter your choice: 2
+// Enter first complex number (real img): 1 2
+// Enter second complex number (real img): 3 4
+// Product: -5.00 + 10.00i

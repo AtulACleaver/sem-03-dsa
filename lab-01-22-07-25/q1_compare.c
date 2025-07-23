@@ -28,3 +28,8 @@ int main(){
     }
     return 0;
 }
+
+// Output:
+// The first number is greater.
+// The second number is greater.
+// Both numbers are equal.

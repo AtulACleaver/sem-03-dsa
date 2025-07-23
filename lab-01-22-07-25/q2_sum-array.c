@@ -46,3 +46,9 @@ int main(){
 
     return 0;
 }
+
+// Sample input output:
+// Enter the number of elements in the array: 2
+// Value of arr[0]: 3
+// Value of arr[1]: 4
+// Sum of prime elements: 3
