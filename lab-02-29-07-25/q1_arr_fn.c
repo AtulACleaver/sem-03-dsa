@@ -29,4 +29,12 @@ void delete(int arr[], int *n, int index) {
     (*n)--;
 }
 
-int main()
+int linear_search(int arr[], int n, int element) {
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == element) {
+            return i; // Return the index of the found element
+        }
+    }
+    return -1; // Element not found
+}
+
