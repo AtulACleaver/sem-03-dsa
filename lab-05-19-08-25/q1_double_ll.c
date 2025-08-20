@@ -5,18 +5,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct node {
+struct node
+{
     int data;
-    struct node* rptr;
-    struct node* lptr;
+    struct node *rptr;
+    struct node *lptr;
 };
 
 struct node *start = NULL;
 
 // Function to insert a new node at a given position
-struct node *insertAtPosition(struct node *start, int pos_5339, int data_5339) {
+struct node *insertAtPosition(struct node *start, int pos_5339, int data_5339)
+{
     struct node *new_node = (struct node *)malloc(sizeof(struct node));
-    if(new_node == NULL){
+    if (new_node == NULL)
+    {
         printf("Overflow \n");
         return start;
     }
@@ -25,21 +28,25 @@ struct node *insertAtPosition(struct node *start, int pos_5339, int data_5339) {
     new_node->lptr = NULL;
     new_node->rptr = NULL;
 
-    if(start == NULL){
-        if(pos_5339 != 1){
+    if (start == NULL)
+    {
+        if (pos_5339 != 1)
+        {
             printf("Position Out of Bounds\n");
             return start;
         }
-        else{
-            start=new_node;
+        else
+        {
+            start = new_node;
             new_node->rptr = NULL;
             new_node->lptr = NULL;
-        return start;
-        }   
+            return start;
+        }
     }
 
     // Case for beginning
-    if(pos_5339 == 1){
+    if (pos_5339 == 1)
+    {
         new_node->rptr = start;
         start = new_node;
         return start;
@@ -48,25 +55,29 @@ struct node *insertAtPosition(struct node *start, int pos_5339, int data_5339) {
     // Case: in between & end
     struct node *ptr_5339 = start;
     int i = 1;
-    while(ptr_5339 != NULL && i < pos_5339 - 1){
+    while (ptr_5339 != NULL && i < pos_5339 - 1)
+    {
         ptr_5339 = ptr_5339->rptr;
         i++;
     }
 
-    if(ptr_5339 == NULL){
+    if (ptr_5339 == NULL)
+    {
         printf("Position out of bounds\n");
         free(new_node);
         return start;
     }
 
     // Insert at end
-    if(ptr_5339->rptr == NULL){
+    if (ptr_5339->rptr == NULL)
+    {
         new_node->lptr = ptr_5339;
         new_node->rptr = NULL;
         ptr_5339->rptr = new_node;
     }
     // Insert in between
-    else{
+    else
+    {
         new_node->rptr = ptr_5339->rptr;
         new_node->lptr = ptr_5339;
         ptr_5339->rptr->lptr = new_node;
@@ -78,17 +89,56 @@ struct node *insertAtPosition(struct node *start, int pos_5339, int data_5339) {
     return start;
 }
 
-void display(struct node *start) {
+// 2. Delete any given data from a double-linked list.
+struct node *delete_data(struct node *start, int data_5339) {
+    if (start == NULL) {
+        printf("List is empty!\n");
+        return start;
+    }
+
     struct node *ptr_5339 = start;
-    while(ptr_5339 != NULL) {
+
+    // Deleting the first node
+    if (ptr_5339->data == data_5339) {
+        start = ptr_5339->rptr;
+        if (start != NULL)
+            start->lptr = NULL;
+        free(ptr_5339);
+        return start;
+    }
+
+    while (ptr_5339 != NULL && ptr_5339->data != data_5339) {
+        ptr_5339 = ptr_5339->rptr;
+    }
+
+    if (ptr_5339 == NULL) {
+        printf("Data not found\n");
+        return start;
+    }
+
+    // Deleting in between or last node
+    if (ptr_5339->rptr != NULL)
+        ptr_5339->rptr->lptr = ptr_5339->lptr;
+    if (ptr_5339->lptr != NULL)
+        ptr_5339->lptr->rptr = ptr_5339->rptr;
+    free(ptr_5339);
+
+    return start;
+}
+
+void display(struct node *start)
+{
+    struct node *ptr_5339 = start;
+    while (ptr_5339 != NULL)
+    {
         printf("%d -> ", ptr_5339->data);
         ptr_5339 = ptr_5339->rptr;
     }
     printf("NULL\n");
 }
 
-
-int main(){
+int main()
+{
 
     int n;
     printf("Input n number of nodes to add: ");
@@ -102,7 +152,6 @@ int main(){
         start = insertAtPosition(start, i, data);
     }
     display(start);
-
 
     return 0;
 }
