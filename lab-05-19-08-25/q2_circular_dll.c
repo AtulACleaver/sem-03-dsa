@@ -46,6 +46,13 @@ struct node* insert_after_value(struct node* start, int value, int new_data) {
     return start;
 }
 
+// Example input output
+// Input: 1. Insert after a value
+//        2. Delete a position
+//        3. Display list
+//        4. Exit
+// Output: Displays the current state of the list after each operation
+
 // Delete any given position in a circular double-linked list.
 struct node* delete_position(struct node* start, int pos_5339) {
     if (start == NULL) {
