@@ -139,19 +139,38 @@ void display(struct node *start)
 
 int main()
 {
+    int choice_5339, data_5339, pos_5339;
 
-    int n;
-    printf("Input n number of nodes to add: ");
-    scanf("%d", &n);
-
-    for (int i = 1; i <= n; i++)
+    while (1)
     {
-        int data;
-        printf("Data = ");
-        scanf("%d", &data);
-        start = insertAtPosition(start, i, data);
+        printf("1. Insert at position\n");
+        printf("2. Delete by value\n");
+        printf("3. Display list\n");
+        printf("4. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice_5339);
+
+        switch (choice_5339)
+        {
+        case 1:
+            printf("Enter position and data: ");
+            scanf("%d %d", &pos_5339, &data_5339);
+            start = insertAtPosition(start, pos_5339, data_5339);
+            break;
+        case 2:
+            printf("Enter data to delete: ");
+            scanf("%d", &data_5339);
+            start = delete_data(start, data_5339);
+            break;
+        case 3:
+            display(start);
+            break;
+        case 4:
+            exit(0);
+        default:
+            printf("Invalid choice\n");
+        }
     }
-    display(start);
 
     return 0;
 }
