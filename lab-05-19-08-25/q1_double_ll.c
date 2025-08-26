@@ -89,6 +89,20 @@ struct node *insertAtPosition(struct node *start, int pos_5339, int data_5339)
     return start;
 }
 
+// example INPUT OUTPUT
+// Input: 1 10
+// Output: 10 -> NULL
+// Input: 1 20
+// Output: 20 -> 10 -> NULL
+// Input: 2 30
+// Output: 20 -> 30 -> 10 -> NULL
+// Input: 3 40
+// Output: 20 -> 30 -> 40 -> 10 -> NULL
+// Input: 4 50
+// Output: 20 -> 30 -> 40 -> 50 -> 10 -> NULL
+// Input: 5 60
+// Output: 20 -> 30 -> 40 -> 50 -> 60 -> 10 -> NULL
+
 // 2. Delete any given data from a double-linked list.
 struct node *delete_data(struct node *start, int data_5339) {
     if (start == NULL) {
@@ -136,6 +150,20 @@ void display(struct node *start)
     }
     printf("NULL\n");
 }
+
+// Sample Input/Output
+// Input: 1 10
+// Output: 10 -> NULL
+// Input: 1 20
+// Output: 20 -> 10 -> NULL
+// Input: 2 30
+// Output: 20 -> 30 -> 10 -> NULL
+// Input: 3 40
+// Output: 20 -> 30 -> 40 -> 10 -> NULL
+// Input: 4 50
+// Output: 20 -> 30 -> 40 -> 50 -> 10 -> NULL
+// Input: 5 60
+// Output: 20 -> 30 -> 40 -> 50 -> 60 -> 10 -> NULL 
 
 int main()
 {

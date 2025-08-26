@@ -31,7 +31,7 @@ struct node* insert_after_value(struct node* start, int value, int new_data) {
     }
 
     struct node* ptr_5339 = start;
-    do {
+    while (ptr_5339->rptr != start) {
         if (ptr_5339->data == value) {
             new_node_5339->rptr = ptr_5339->rptr;
             new_node_5339->lptr = ptr_5339;
@@ -40,11 +40,15 @@ struct node* insert_after_value(struct node* start, int value, int new_data) {
             return start;
         }
         ptr_5339 = ptr_5339->rptr;
-    } while (ptr_5339 != start);
+    }
 
     printf("Value %d not found in the list.\n", value);
+    free(new_node_5339);
     return start;
 }
+
+// example input output
+
 
 // Example input output
 // Input: 1. Insert after a value
@@ -94,6 +98,17 @@ struct node* delete_position(struct node* start, int pos_5339) {
 
     return start;
 }
+
+// sample input output for the function above
+// Input: 1. Insert after a value
+//        2. Delete a position
+//        3. Display list
+//        4. Exit
+// Output: Displays the current state of the list after each operation
+//example list
+// 1 <-> 2 <-> 3 <-> 4
+// input: 2
+// output: 1 <-> 2 <-> 5 <-> 3 <-> 4
 
     // Display the circular doubly linked list
 void display_list(struct node* start) {
