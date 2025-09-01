@@ -1,0 +1,54 @@
+// Two brackets are considered to be a matched pair if the an opening bracket (i.e., (• [. or { ) occurs to the left of a closing bracket (i.e., ), ]. o1 }) of the exact same type. There are three types of matched pairs of brackets: []. {), and O. A matching pair of brackets is not balanced if the set of brackets it encloses are not matched. WAP to determine whether the input sequence of brackets is balanced or not. If a string is balanced, it print YES on a new line; otherwise, print NO on a new line. Example: Input: {O]} and Output: YES Input: {O)} and Output: NO
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define MAX 100
+
+char stack[MAX];
+int top = -1;
+
+void push(char c_5339) {
+    if (top < MAX - 1) {
+        stack[++top] = c_5339;
+    }
+}
+
+char pop() {
+    if (top >= 0) {
+        return stack[top--];
+    }
+    return '\0';
+}
+
+int isBalanced(char *expr_5339) {
+    for (int i = 0; i < strlen(expr_5339); i++) {
+        char curr_5339 = expr_5339[i]; 
+        if (curr_5339 == '(' || curr_5339 == '[' || curr_5339 == '{') {
+            push(curr_5339);
+        } else if (curr_5339 == ')' || curr_5339 == ']' || curr_5339 == '}') {
+            char open_5339 = pop();
+            if ((curr_5339 == ')' && open_5339 != '(') ||
+                (curr_5339 == ']' && open_5339 != '[') ||
+                (curr_5339 == '}' && open_5339 != '{')) {
+                return 0;
+            }
+        }
+    }
+    return top == -1;
+}
+
+int main() {
+    char expr_5339[MAX];
+    printf("Enter an expression: ");
+    scanf("%s", expr_5339);
+
+    if (isBalanced(expr_5339)) {
+        printf("YES\n");
+    } else {
+        printf("NO\n");
+    }
+
+    return 0;
+}
