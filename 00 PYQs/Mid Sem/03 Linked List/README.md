@@ -1,5 +1,3 @@
-// Set all possible questions coming in mid sem exam from Linked List of DS using C
-
 # Linked List - Mid Sem Questions
 
 This document contains a collection of possible questions that may appear in the mid-semester exam for the course "Introduction to Data Structures using C". These questions specifically focus on the topic of linked lists and their implementation in the C programming language.

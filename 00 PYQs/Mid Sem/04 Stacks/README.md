@@ -1,67 +1,47 @@
-// Set all possible questions coming in mid sem exam from Linked List of DS using C
+// Set all possible questions coming in mid sem exam from Stack of DS using C
 
-# Linked List - Mid Sem Questions
+# Stack - Mid Sem Questions
 
-This document contains a collection of possible questions that may appear in the mid-semester exam for the course "Introduction to Data Structures using C". These questions specifically focus on the topic of linked lists and their implementation in the C programming language.
+This document contains a collection of possible questions that may appear in the mid-semester exam for the course "Introduction to Data Structures using C". These questions specifically focus on the topic of stacks and their implementation in the C programming language.
 
 ---
 
 ### Code Questions
 
-1. Represent a second order polynomial using Linked list.
-2. Describe the process of inserting and deleting nodes in a circular linked list at different positions (beginning, middle, end). Use diagrams as well as code snippets to support your explanation.
-3. Write the Pseudocode to convert a Single Linked List to Circular Linked List.
-4. Write a pseudocode / C-function that will delete a node from any given position from a Double Linked List.
-5. Write a pseudocode / C-function to remove the last node from a Single Linked List and insert that node at the beginning of the list.
-6. Write an algorithm/ C function to reverse a singly linked list, where the pointer variable head is holding the address of the first node of the linked list and this head will be passed as an argument to the function.
-7. Write an algorithm/ C function to insert a node after a specific position in a doubly linked list, where previous pointer is named as `prev` and the next pointer is named as `next`. `head` is a pointer variable holding the address of the first node of the list, which is passed as the argument to the function.
-8. Given two sorted single linked lists. Write an algorithm/ C-type function to merge them into a third linked list in sorted order, where two lists are passed as parameters to the function. Also find the time complexity of the algorithm.
-9. If the node of a doubly linked list is declared in C as:
-    ```c
-    struct node {
-        int data;
-        struct node *prev;
-        struct node *next; 
-    };
-    ```
-    and `ptr` is a pointer pointing to one of the internal nodes of a doubly linked list, then write the required statements to delete the node to which `ptr` is pointing to without using any other pointer variable.
-10. The following data are stored in a singly linked list in the order shown below:  
-    `1-2-3->4->5->6->7->8->9->10`  
-    Write a pseudo code/ C-function to delete all odd numbers from the list.
+1. How can a stack be used to reverse a string? Outline the steps involved.
+2. Write a C program or algorithm to evaluate a postfix expression using a stack. Demonstrate the step-by-step evaluation of the expression "534*+2-" based on your implementation. Clearly illustrate each intermediate step and the contents of the stack at each stage of the evaluation.
+3. Which data structure is used to implement recursion? Give one small example of recursive program in C.
+4. Write a C- function to reverse string with the help of Stack.
+5. Write a pseudocode / C-function to sort the elements of a stack without using any additional data structure or variable, and without violating the Stack abstraction principle. [IMPORTANT]
+6. Write a pseudocode / C-function to evaluate a postfix expression using a Stack. Then, use this approach to evaluate the given postfix expression in 3 (a), showing each step in detail taking the values of a=3,b=2, c=1, d=5, e=1.
+7. Balance ( ) , { } , [ ] are called matching symbols. Write a pseudocode / C-function to check whether the input expression has balanced parentheses or not using Stack.
+8. Write a recursive function to display elements of stack using the operations push() and pop() without violating the LIFO concept.
+9. Given a stack of integers, write the pseudo code/ C function to display all elements in the order in which they have been inserted using another temporary stack without violating LIFO concept.
+10. Design a method for keeping two stacks within a single linear array S in such a way that neither stack overflows until the entire array is used. Write C functions push1(), push2(), pop1(), and pop2() to manipulate the two stacks. (Hints: Two stacks grow towards each other)
+11. Write an algorithm/ pseudo code/ C-function to convert an expression in infix notation to its equivalent prefix expression. Convert the infix expression: (A+B)+C-(D-E)F to prefix equivalent mentioning each step of the algorithm.
 
 ---
 
 ### Theory Questions
 
-1. What is the output of the following function in which head is pointing to the first node of the given linked list: `10->20->30->40->50`?
-    ```c
-    void disp(struct node *head)
+1. The items: 11, 12, 13, 14, 15 and 16 are pushed in a stack, one after the other starting from 11. The stack is popped five times and each element is inserted in a queue. Then, three elements are deleted from the queue and pushed back on the stack. Now two items are popped from the stack. The popped items are?
+2. Convert the following expression to postfix notation using the infix-to-postfix conversion algorithm with a Stack. Provide a detailed step-by-step representation of the process. a*b/ (a-c) +d*b
+3. Convert the following expression to postfix notation using the infix-to-postfix conversion algorithm with a Stack. Provide a detailed step-by-step representation of the process. a / (b-c)+d*e-a*c
+4. A stack of integers initially contain three elements 5, 7, 3 from bottom to top. The size of the stack is 6. Mention the output of the operations push (4), pop (0), push (10), push (8), push (0), push (9), pop (0), pop (0) on the stack.
+5. Convert the infix expression: M^(N*P)/Q+R-S^T/((U/V)/W-X to postfix expression using stack. Explain each step showing the status of the stack as well as the partial postfix expression.
+6. What will be the output of the prefix expression: +, * ,2, t, 1, 14, 2, 5, 1 after evaluation?
+7. A stack is implemented using an array declared in C: st[N] and an integer variable: pos. The pseudo code for the push ( and pop operations of the stack are as follow:
+
+    ```
+    push(x)
     {
-        if (head == NULL)
-            return;
-        printf("%d ", head->info);
-        if (head->next != NULL)
-            disp(head->next->next);
-        printf("%d ", head->info);
+        st[pos] = x;
+        pos - pos - 1;
+    }
+    pop0
+    {
+        pos = pos + 1;
+        return (st[pos]);
     }
     ```
-2. What does the following code segment do on a doubly linked list? `mid` is the address of some middle node and `new` is the address of a newly created node.
-    ```c
-    new->prev = mid;
-    new->next = mid->next;
-    new->prev->next = new;
-    new->next->prev = new;
-    ```
-    Where does the new node insert to?
-3. What does the following function do for a given linked list with first node as head with a node structure: `struct node { int data; struct node *next; };`?
-    ```c
-    void func(struct node *head)
-    {
-        if (head == NULL)
-            return;
-        func(head->next);
-        printf("%d ", head->data);
-    }
-    ```
-4. How a singly linked list can be used to represent the following polynomial:  
-    `2xy^2z^3 + 3x^2yz^2 + 4xy^3z + 5x^2y^2 + 7xy^2z^5 + 11`
+    Find the initialization of integer variable: pos for an empty stack with a maximum capacity of N elements for the
