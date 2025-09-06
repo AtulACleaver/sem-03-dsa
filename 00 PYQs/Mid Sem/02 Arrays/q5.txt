@@ -1,0 +1,11 @@
+5. Write a C function of O(n) order for removing all odd numbers from a given array. Example, if the array contains 10, 2, 3, 7, 8, 6, and 11. The output should be 10, 2, 8, and 6.
+
+algo remove_odd(arr, n)
+1. set i = j = 0
+2. for(i < n; i++){
+    2.1.if(arr[i] % 2 == 0)
+        2.1.1. arr[j] = arr[i];
+        2.1.2. j++
+
+3. return j as the new size of array
+}
