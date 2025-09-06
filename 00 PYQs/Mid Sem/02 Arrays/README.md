@@ -10,15 +10,14 @@ This document contains a collection of possible questions that may appear in the
 2. Write pseudocode / C-function to merge two sorted arrays using only Array data structure.
 3. Write a pseudocode / C-function that will add two Sparse matrix using suitable data-structure.
 4. Write pseudocode / C-function to Transpose a Sparse matrix.
-5. Write pseudocode / C-function to merge two sorted arrays using only Array data structure.
-6. Write a C function of O(n) order for removing all odd numbers from a given array. Example, if the array contains 10, 2, 3, 7, 8, 6, and 11. The output should be 10, 2, 8, and 6.
-7. Given an array of integers, write a C function to update every element with the multiplication of its previous and next elements with the exceptions: i) the First element is replaced the by multiplication the of first and second elements and il) the last element is replaced by multiplication of last and second last elements.
+5. Write a C function of O(n) order for removing all odd numbers from a given array. Example, if the array contains 10, 2, 3, 7, 8, 6, and 11. The output should be 10, 2, 8, and 6.
+6. Given an array of integers, write a C function to update every element with the multiplication of its previous and next elements with the exceptions: i) the First element is replaced the by multiplication the of first and second elements and ii) the last element is replaced by multiplication of last and second last elements.
    
    Example:  
    Input: arr[] = {2, 3, 4, 5, 6}  
    Output: arr[] = {6, 8, 15, 24, 30}
-8. Write a pseudo code/ C-function to sort the elements present at the even index of an array in ascending order without using any additional data structure. **[IMPORTANT]**
-9. Write a pseudo code/ C-function to display triplet of transpose a sparse matrix with a suitable example.
+7. Write a pseudo code/ C-function to sort the elements present at the even index of an array in ascending order without using any additional data structure. **[IMPORTANT]**
+8. Write a pseudo code/ C-function to display triplet of transpose a sparse matrix with a suitable example.
 
 ---
 
