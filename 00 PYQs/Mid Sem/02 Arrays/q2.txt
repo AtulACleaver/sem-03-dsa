@@ -1,0 +1,24 @@
+2. Write pseudocode / C-function to merge two sorted arrays using only Array data structure.
+
+algo merge_sorted_arr(arr1, arr2, n1, n2)
+1. create arr3[n1+n2]
+2. create i = j = k = 0
+3. while(i < n1 AND j < n2)
+    3.1. if(arr1[i] < arr2[j])
+        3.1.1. arr3[k] = arr1[i]
+        3.1.2. i++
+    3.2. else
+        3.2.1. arr3[k] = arr2[j]
+        3.2.2. j++
+    3.3. k++
+4. while i < n1
+    4.1. arr3[k] = arr1[i];
+    4.2. i++
+    4.3. k++
+5. while j < n2
+    5.1 arr3[k] = arr2[j]
+    5.2 j++
+    5.3 k++
+
+6.  Stop & Return
+
