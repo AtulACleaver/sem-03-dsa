@@ -17,7 +17,6 @@ This document contains a collection of possible questions that may appear in the
    Input: arr[] = {2, 3, 4, 5, 6}  
    Output: arr[] = {6, 8, 15, 24, 30}
 7. Write a pseudo code/ C-function to sort the elements present at the even index of an array in ascending order without using any additional data structure. **[IMPORTANT]**
-8. Write a pseudo code/ C-function to display triplet of transpose a sparse matrix with a suitable example.
 
 ---
 

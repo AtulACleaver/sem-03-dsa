@@ -1,0 +1,15 @@
+6. Given an array of integers, write a C function to update every element with the multiplication of its previous and next elements with the exceptions: 
+i) the First element is replaced the by multiplication the of first and second elements and 
+ii) the last element is replaced by multiplication of last and second last elements.   
+   Example:  
+   Input: arr[] = {2, 3, 4, 5, 6}  
+   Output: arr[] = {6, 8, 15, 24, 30}
+
+algo multiply_arr_el(arr, n)
+1. create temp[], i = 1
+2. temp[0] = arr[0] * arr[1]
+3. temp[n-1] = arr[n-1] * arr[n-2]
+4. for (i < n-1, i++)
+    4.1. temp[i] = arr[i-1] * arr[i+1]
+5. copy temp to arr
+6. return & exit

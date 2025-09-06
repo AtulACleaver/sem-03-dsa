@@ -13,12 +13,11 @@ This document contains a collection of possible questions that may appear in the
 3. Which data structure is used to implement recursion? Give one small example of recursive program in C.
 4. Write a C- function to reverse string with the help of Stack.
 5. Write a pseudocode / C-function to sort the elements of a stack without using any additional data structure or variable, and without violating the Stack abstraction principle. [IMPORTANT]
-6. Write a pseudocode / C-function to evaluate a postfix expression using a Stack. Then, use this approach to evaluate the given postfix expression in 3 (a), showing each step in detail taking the values of a=3,b=2, c=1, d=5, e=1.
-7. Balance ( ) , { } , [ ] are called matching symbols. Write a pseudocode / C-function to check whether the input expression has balanced parentheses or not using Stack.
-8. Write a recursive function to display elements of stack using the operations push() and pop() without violating the LIFO concept.
-9. Given a stack of integers, write the pseudo code/ C function to display all elements in the order in which they have been inserted using another temporary stack without violating LIFO concept.
-10. Design a method for keeping two stacks within a single linear array S in such a way that neither stack overflows until the entire array is used. Write C functions push1(), push2(), pop1(), and pop2() to manipulate the two stacks. (Hints: Two stacks grow towards each other)
-11. Write an algorithm/ pseudo code/ C-function to convert an expression in infix notation to its equivalent prefix expression. Convert the infix expression: (A+B)+C-(D-E)F to prefix equivalent mentioning each step of the algorithm.
+6. Balance ( ) , { } , [ ] are called matching symbols. Write a pseudocode / C-function to check whether the input expression has balanced parentheses or not using Stack.
+7. Write a recursive function to display elements of stack using the operations push() and pop() without violating the LIFO concept.
+8. Given a stack of integers, write the pseudo code/ C function to display all elements in the order in which they have been inserted using another temporary stack without violating LIFO concept.
+9. Design a method for keeping two stacks within a single linear array S in such a way that neither stack overflows until the entire array is used. Write C functions push1(), push2(), pop1(), and pop2() to manipulate the two stacks. (Hints: Two stacks grow towards each other)
+10. Write an algorithm/ pseudo code/ C-function to convert an expression in infix notation to its equivalent prefix expression. Convert the infix expression: (A+B)+C-(D-E)F to prefix equivalent mentioning each step of the algorithm.
 
 ---
 
