@@ -6,7 +6,8 @@ Mid-Semester Possible Questions (Introduction Unit)
 ## 1. Conceptual / Theory Questions
 
 ### 1.1 Abstract Data Types (ADT)
-2. What is an ADT (Abstract Data Type) in data structure? Explain with examples.
+1. What is an ADT (Abstract Data Type) in data structure? Explain with examples.
+Ans - ADT or Abstract Data Type is a way where we look at the data structure and focus on what it does and not on how it does it.  For example - Stacks & Queues can be implemented using both arrays & linked lists.
 
 ### 1.2 Time & Space Complexity Analysis
 1. Find the worst-case time complexity of the following C function:
@@ -16,12 +17,14 @@ Mid-Semester Possible Questions (Introduction Unit)
        int i, j, k = 3;
        for (i = 1; i < n; i++)
        {
-           for (j = 1; j < n; j - pow(j, k))   // Note: update expression as written is unusual
+           for (j = 1; j < n; j += pow(j, k))   // Note: update expression as written is unusual
                printf("%d, %d", i, j);
        }
    }
    ```
-3. What is the approximate return value (in terms of n) of the following function? Explain each loop to compute the value of q.
+   => O(nloglog(n))
+
+2. What is the approximate return value (in terms of n) of the following function? Explain each loop to compute the value of q.
    ```c
    int func(int n)
    {
@@ -37,7 +40,9 @@ Mid-Semester Possible Questions (Introduction Unit)
        return q;
    }
    ```
-4. What is the time complexity of the following code?
+
+   O(n * log n * log n)
+3. What is the time complexity of the following code?
    ```c
    void sample(int n)
    {
@@ -51,7 +56,8 @@ Mid-Semester Possible Questions (Introduction Unit)
        }
    }
    ```
-5. Find the time complexity of the following function:
+   =>O(nlogn)
+4. Find the time complexity of the following function:
    ```c
    void func(int n)
    {
@@ -64,5 +70,5 @@ Mid-Semester Possible Questions (Introduction Unit)
        }
    }
    ```
-
+    => O(n√n)
 ---
