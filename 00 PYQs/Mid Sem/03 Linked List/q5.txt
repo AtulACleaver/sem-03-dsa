@@ -1,0 +1,32 @@
+5. Write an algorithm/ C function to insert a node after a specific position in a doubly linked list, where previous pointer is named as `prev` and the next pointer is named as `next`. `head` is a pointer variable holding the address of the first node of the list, which is passed as the argument to the function.
+
+algo insert_after_pos_dll(head, pos)
+1. Create new_node
+2. if new_node == NULL
+       Display "Overflow"
+       return
+3. new_node->data = scan data
+4. new_node->next = NULL
+   new_node->prev = NULL
+5. if head == NULL
+       if pos == 0
+            head = new_node
+            return
+       else
+            Display "Position does not exist"
+            return
+6. ptr = head
+7. count = 0
+8. while count < pos and ptr->next != NULL
+       ptr = ptr->next
+       count = count + 1
+9. if count < pos
+       Display "Position out of range"
+       return
+10. new_node->next = ptr->next
+11. new_node->prev = ptr
+12. if ptr->next != NULL
+        ptr->next->prev = new_node
+13. ptr->next = new_node
+14. End
+
