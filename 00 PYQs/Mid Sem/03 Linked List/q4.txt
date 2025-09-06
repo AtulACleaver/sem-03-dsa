@@ -1,0 +1,55 @@
+4. Write an algorithm/ C function to reverse a singly linked list, where the pointer variable head is holding the address of the first node of the linked list and this head will be passed as an argument to the function.
+
+algo reverse_sll(head)
+1. set prev = NULL
+2. set curr = head
+3. create next = NULL
+4. while curr!=NULL 
+    4.1. next = curr->next
+    4.2. curr->next = prev
+    4.3. prev = curr
+    4.4. curr = next
+5. head = prev
+6. return head
+
+// Dry run it for a sample linked list with 4 nodes
+// Example: 10 -> 20 -> 30 -> 40 -> NULL
+// After reversal: 40 -> 30 -> 20 -> 10 -> NULL
+
+prev = NULL
+curr = 10
+next = NULL
+
+Iteration 1:
+next = 20
+curr->next = NULL
+prev = 10
+curr = 20
+
+List: 10 -> NULL
+
+Iteration 2:
+next = 30
+curr->next = 10
+prev = 20
+curr = 30
+
+List: 20 -> 10 -> NULL
+
+Iteration 3:
+next = 40
+curr->next = 20
+prev = 30
+curr = 40
+
+List: 30 -> 20 -> 10 -> NULL
+
+Iteration 4:
+next = NULL
+curr->next = 30
+prev = 40
+curr = NULL
+
+List: 40 -> 30 -> 20 -> 10 -> NULL
+
+End & Exit
