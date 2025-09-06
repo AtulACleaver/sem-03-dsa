@@ -1,0 +1,15 @@
+1. Write the Pseudocode to convert a Single Linked List to Circular Linked List.
+
+algo sll_to_cll (head)
+1. if(head == NULL)
+    1.1. List empty
+2. else
+    2.1 if(head->next == NULL)
+        2.1.1. head->next = head;
+        2.1.2 return
+    2.2 else
+        2.2.1 set ptr = head
+        2.2.2 while(ptr -> next != NULL)
+            2.2.2.1. ptr = ptr->next
+        2.2.3 ptr->next = head;
+3. Stop & Exit

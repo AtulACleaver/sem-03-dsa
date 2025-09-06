@@ -1,0 +1,15 @@
+3. Write a pseudocode / C-function to remove the last node from a Single Linked List and insert that node at the beginning of the list.
+
+algo move_last_node(start)
+1.if(start == NULL)
+    1.1. Display List Empty
+2. else if(start->next == NULL)
+    2.1. Display condition already satisfied
+3. else
+    3.1. set ptr = start
+    3.2. while(ptr->next->next != NULL)
+        3.3 ptr = ptr->next
+    3.3. ptr->next->next = start
+    3.4. start = ptr->next
+    3.5. ptr->next = NULL
+4. Stop & Exit
