@@ -1,0 +1,13 @@
+7. If the node of a doubly linked list is declared in C as:
+```c
+struct node {
+    int data;
+    struct node *prev;
+    struct node *next; 
+};
+```
+and `ptr` is a pointer pointing to one of the internal nodes of a doubly linked list, then write the required statements to delete the node to which `ptr` is pointing to without using any other pointer variable.
+
+ptr->prev->next = ptr->next
+ptr->next->prev = ptr->prev
+free(ptr)

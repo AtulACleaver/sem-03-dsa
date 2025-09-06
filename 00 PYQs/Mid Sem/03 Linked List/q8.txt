@@ -1,0 +1,19 @@
+8. The following data are stored in a singly linked list in the order shown below:  
+`1-2-3->4->5->6->7->8->9->10`  
+Write a pseudo code/ C-function to delete all odd numbers from the list.
+
+algo delete_odd_num(head)
+1. while head != NULL and head->data % 2 == 1
+    1.1. temp = head
+    1.2. head = head->next
+    1.3. free(temp)
+
+2. ptr = head
+3. while ptr != NULL and ptr->next != NULL
+    3.1. if ptr->next->data % 2 == 1
+        3.1.1. temp = ptr->next
+        3.1.2. ptr->next = ptr->next->next
+        3.1.3. free(temp)
+       3.2. else
+            3.2.1. ptr = ptr->next
+4. return head

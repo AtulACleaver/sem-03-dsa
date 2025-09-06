@@ -1,0 +1,3 @@
+6. Given two sorted single linked lists. Write an algorithm/ C-type function to merge them into a third linked list in sorted order, where two lists are passed as parameters to the function. Also find the time complexity of the algorithm.
+
+algo 
