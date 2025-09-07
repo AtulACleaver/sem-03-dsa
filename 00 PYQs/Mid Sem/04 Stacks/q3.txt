@@ -1,0 +1,9 @@
+3. Which data structure is used to implement recursion? Give one small example of recursive program in C.
+
+1. create stack[], top = -1
+2. push all numbers from 1 to n into stack
+3. result = 1
+4. while stack is not empty
+      pop number from stack
+      result = result * number
+5. return result

@@ -1,0 +1,16 @@
+4. Write a pseudocode / C-function to sort the elements of a stack without using any additional data structure or variable, and without violating the Stack abstraction principle. [IMPORTANT]
+
+algo sortStack(stack)
+1. if stack is empty
+       return
+2. temp = pop(stack)
+3. sortStack(stack)          // recursive call to sort remaining stack
+4. insertSorted(stack, temp) // insert temp in sorted order
+
+algo insertSorted(stack, value)
+1. if stack is empty OR value > top(stack)
+       push value into stack
+       return
+2. temp = pop(stack)
+3. insertSorted(stack, value)
+4. push temp back into stack
