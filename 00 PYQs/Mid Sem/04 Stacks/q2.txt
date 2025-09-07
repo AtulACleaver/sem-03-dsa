@@ -1,0 +1,12 @@
+2. Write a C program or algorithm to evaluate a postfix expression using a stack. Demonstrate the step-by-step evaluation of the expression "534*+2-" based on your implementation. Clearly illustrate each intermediate step and the contents of the stack at each stage of the evaluation. 
+
+algo postfix_evaluation(postfix_exp)
+    1. create stack[], top = -1
+    2. while(postfix_exp != '\0')
+        2.1. if(operand)
+            2.1.1. push operand into stack
+        2.2 else if(operator)
+            2.2.1 set temp = pop(stack)
+            2.2.2 stack[top] = stack[top] (operator) temp
+    3. Final result = stack[top]
+    4. Stop & Exit

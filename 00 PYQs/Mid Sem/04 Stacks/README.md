@@ -9,7 +9,7 @@ This document contains a collection of possible questions that may appear in the
 ### Code Questions
 
 1. How can a stack be used to reverse a string? Outline the steps involved.
-2. Write a C program or algorithm to evaluate a postfix expression using a stack. Demonstrate the step-by-step evaluation of the expression "534*+2-" based on your implementation. Clearly illustrate each intermediate step and the contents of the stack at each stage of the evaluation.
+2. Write a C program or algorithm to evaluate a postfix expression using a stack. Demonstrate the step-by-step evaluation of the expression "534*+2-" based on your implementation. Clearly illustrate each intermediate step and the contents of the stack at each stage of the evaluation. 
 3. Which data structure is used to implement recursion? Give one small example of recursive program in C.
 4. Write a pseudocode / C-function to sort the elements of a stack without using any additional data structure or variable, and without violating the Stack abstraction principle. [IMPORTANT]
 5. Balance ( ) , { } , [ ] are called matching symbols. Write a pseudocode / C-function to check whether the input expression has balanced parentheses or not using Stack.
@@ -26,7 +26,7 @@ This document contains a collection of possible questions that may appear in the
 2. Convert the following expression to postfix notation using the infix-to-postfix conversion algorithm with a Stack. Provide a detailed step-by-step representation of the process. a*b/ (a-c) +d*b
 3. Convert the following expression to postfix notation using the infix-to-postfix conversion algorithm with a Stack. Provide a detailed step-by-step representation of the process. a / (b-c)+d*e-a*c
 4. A stack of integers initially contain three elements 5, 7, 3 from bottom to top. The size of the stack is 6. Mention the output of the operations push (4), pop (0), push (10), push (8), push (0), push (9), pop (0), pop (0) on the stack.
-5. Convert the infix expression: M^(N*P)/Q+R-S^T/((U/V)/W-X to postfix expression using stack. Explain each step showing the status of the stack as well as the partial postfix expression.
+5. Convert the infix expression: M^(N*P)/Q+R-S^T/((U/V)/W-X) to postfix expression using stack. Explain each step showing the status of the stack as well as the partial postfix expression.
 6. What will be the output of the prefix expression: +, * ,2, t, 1, 14, 2, 5, 1 after evaluation?
 7. A stack is implemented using an array declared in C: st[N] and an integer variable: pos. The pseudo code for the push ( and pop operations of the stack are as follow:
 

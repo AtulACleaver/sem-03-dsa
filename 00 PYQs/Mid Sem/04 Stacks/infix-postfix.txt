@@ -1,0 +1,25 @@
+// Write the core program and give me space to write the main function for conversion of infix to postfix expression using stack data structure in C language using stack with array
+
+void infixToPostfix(const char* infix, char* postfix) {
+1. int i = 0, j = 0;
+2. create char c, symbol_stack[];
+
+3. while(infix[i++] != '\0'):
+    3.1. c = infix[i]
+    3.2. if(c is an operand)
+        3.2.1. postfix[j++] = c
+    3.3 else if(c is '(')
+        3.3.1. push '(' into symbol_stack
+    3.4. else if(c is an operator)
+        3.4.1 if(symbol_stack == empty)
+            3.4.1.1. push c to symbol_stack
+        3.4.2 else if(precedence(c) < precedence(symbol_stack[top])
+            3.4.2.1 postfix[j++] = symbol_stack[top--]
+            3.4.2.2 push c to symbol_stack[top++]
+        3.4.3. else if(precedence(c) > precedence(symbol_stack[top])
+            3.4.3.1 push c to symbol_stack 
+    3.5 else if(c is ')')
+        3.5.1 pop from symbol_stack until '(' is found and put in postfix[j++]
+4. while(symbol_stack is not empty)
+    4.1. pop from symbol_stack and add to postfix[top++]
+}

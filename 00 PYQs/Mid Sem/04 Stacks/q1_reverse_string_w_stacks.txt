@@ -1,3 +1,6 @@
 1. How can a stack be used to reverse a string? Outline the steps involved.
 
-algo reverse_stack
+algo reverse_stack(s)
+1. create stack, top = -1
+2. while(s != '\0')
+    2.1 
