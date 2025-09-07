@@ -3,7 +3,7 @@
 algo remove_odd(arr, n)
 1. set i = j = 0
 2. for(i < n; i++){
-    2.1.if(arr[i] % 2 == 0)
+    2.1.if(arr[i] % 2 == 1)
         2.1.1. arr[j] = arr[i];
         2.1.2. j++
 
