@@ -1,0 +1,19 @@
+# Prefix Evaluation
+Algo to evaluate a prefix expression
+
+algo prefix_evaluation(prefix_exp)
+    1. reverse(prefix_exp)
+    2. create c, i = 0, stack[]
+    3. while (prefix_exp[i] != '\0') 
+        3.1. if(operand)
+            3.1.1. push prefix[i] into stack
+        3.2. else(operator)
+            3.2.1. temp = pop()
+            3.2.2. temp2 = pop()
+            3.2.3. stack.push(temp(operator)temp2)
+        3.3 i++
+    4. if(stack.size == 1)
+        4.1 result = stack[top]
+        4.2 display result
+    5. else
+        4.3 display invaild expression
