@@ -1,3 +1,35 @@
 6. Given two sorted single linked lists. Write an algorithm/ C-type function to merge them into a third linked list in sorted order, where two lists are passed as parameters to the function. Also find the time complexity of the algorithm.
 
-algo 
+algo combine_sorted_ll(head1, head2)
+1. head3 = NULL, p3 = NULL
+2. p1 = head1, p2 = head2
+
+3. while (p1 != NULL and p2 != NULL)
+    if (p1->data <= p2->data)
+        create new_node with p1->data
+        if (head3 == NULL)
+            head3 = new_node, p3 = new_node
+        else
+            p3->next = new_node, p3 = new_node
+        p1 = p1->next
+    else
+        create new_node with p2->data
+        if (head3 == NULL)
+            head3 = new_node, p3 = new_node
+        else
+            p3->next = new_node, p3 = new_node
+        p2 = p2->next
+
+4. while (p1 != NULL)
+        create new_node with p1->data
+        p3->next = new_node
+        p3 = new_node
+        p1 = p1->next
+
+5. while (p2 != NULL)
+        create new_node with p2->data
+        p3->next = new_node
+        p3 = new_node
+        p2 = p2->next
+
+6. return head3
