@@ -1,0 +1,24 @@
+# Find the middle node
+
+algo middle_node(start)
+    1. create pointers fast, slow
+    2. while(fast->next != NULL and fast != NULL)
+        2.1. fast = fast->next->next
+        2.2. slow = slow->next
+    3. Return slow // this will the middle node
+
+# Code to find fist node of the loop in sll
+algo first_node_loop(head)
+    1. create pointers fast, slow
+    2. while(fast->next != NULL and fast != NULL)
+        2.1. fast = fast->next->next
+        2.2. slow = slow->next
+        2.3. if(fast == slow)
+            2.4. return slow // loop detected
+    3. if(fast != slow)
+        3.1. display no loop found!
+    4. slow = head
+    5. while (slow != fast)
+        5.1. slow = slow->next
+        5.2. fast = fast->next
+    6. return slow // first node of loop found!!

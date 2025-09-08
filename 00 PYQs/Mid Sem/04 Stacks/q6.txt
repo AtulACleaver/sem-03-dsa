@@ -1,0 +1,9 @@
+# 6. Write a recursive function to display elements of stack using the operations push() and pop() without violating the LIFO concept.
+
+algo display()
+    1. if(empty)
+        1.1. return 
+    2. x = pop()
+    3. display()
+    4. print x
+    5. push(x)
