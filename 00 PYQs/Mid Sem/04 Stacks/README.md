@@ -12,11 +12,12 @@ This document contains a collection of possible questions that may appear in the
 2. Write a C program or algorithm to evaluate a postfix expression using a stack. Demonstrate the step-by-step evaluation of the expression "534*+2-" based on your implementation. Clearly illustrate each intermediate step and the contents of the stack at each stage of the evaluation. 
 3. Which data structure is used to implement recursion? Give one small example of recursive program in C.
 4. Write a pseudocode / C-function to sort the elements of a stack without using any additional data structure or variable, and without violating the Stack abstraction principle. [IMPORTANT]
-5. Balance ( ) , { } , [ ] are called matching symbols. Write a pseudocode / C-function to check whether the input expression has balanced parentheses or not using Stack.
+5. Balance ( ) , { } , [ ] are called matching symbols. Write a pseudocode / C-function to check whether the input expression has balanced parentheses or not usi
 6. Write a recursive function to display elements of stack using the operations push() and pop() without violating the LIFO concept.
-7. Given a stack of integers, write the pseudo code/ C function to display all elements in the order in which they have been inserted using another temporary stack without violating LIFO concept.
-8. Design a method for keeping two stacks within a single linear array S in such a way that neither stack overflows until the entire array is used. Write C functions push1(), push2(), pop1(), and pop2() to manipulate the two stacks. (Hints: Two stacks grow towards each other)
-9.  Write an algorithm/ pseudo code/ C-function to convert an expression in infix notation to its equivalent prefix expression. Convert the infix expression: (A+B)+C-(D-E)F to prefix equivalent mentioning each step of the algorithm.
+ng Stack.
+1. Given a stack of integers, write the pseudo code/ C function to display all elements in the order in which they have been inserted using another temporary stack without violating LIFO concept.
+2. Design a method for keeping two stacks within a single linear array S in such a way that neither stack overflows until the entire array is used. Write C functions push1(), push2(), pop1(), and pop2() to manipulate the two stacks. (Hints: Two stacks grow towards each other)
+3.  Write an algorithm/ pseudo code/ C-function to convert an expression in infix notation to its equivalent prefix expression. Convert the infix expression: (A+B)+C-(D-E)F to prefix equivalent mentioning each step of the algorithm.
 
 ---
 
