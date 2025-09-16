@@ -21,6 +21,10 @@ int findLength(char *str){
     return count;        
 }
 
+// Example
+// Input: Hello World
+// Output: 11
+
 void toLowerCase(char *str){
     int i = 0;
     while(str[i] != '\0'){
@@ -30,6 +34,10 @@ void toLowerCase(char *str){
         i++;
     }
 }
+
+// Example
+// Input: HELLO WORLD
+// Output: hello world
 
 void appendStrings(char *str1, char *str2){
     int i = 0;
@@ -47,6 +55,8 @@ void appendStrings(char *str1, char *str2){
     str1[i] = '\0';
 }
 
+// Output: If str1 = "Hello", str2 = " World", then str1 = "Hello World"
+
 int compareStrings(char *str1, char *str2){
     int i = 0;
     while (str1[i] != '\0' && str2[i] != '\0')
@@ -60,6 +70,10 @@ int compareStrings(char *str1, char *str2){
     // If we reached here, one of the strings is a prefix of the other
     return str1[i] - str2[i];
 }
+
+ // Output: If str1 is "Hello" and str2 is "Hello", return 0
+// If str1 is "Hello" and str2 is "World", return a negative value
+// If str1 is "World" and str2 is "Hello", return a positive value
 
 // Meaning of comparing strings
 // If str1 is less than str2, return a negative value
@@ -79,6 +93,8 @@ void reverseString(char *str){
         j--;
     }
 }
+
+// Output: If str = "Hello", then str = "olleH"
 
 
 int main(){

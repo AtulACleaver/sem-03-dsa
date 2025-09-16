@@ -9,6 +9,7 @@ algo add_sparse(A, A_r, B, B_r)
 4. C[0][1] = A[0][1]
 // Set C[0][2] later
 5. while (i < A_r and j < B_r)
+    # compare A[i] and B[j] and copy the smaller one to C[k]
     5.1. if(A[i][0] < B[j][0] || (A[i][0] == B[j][0] && A[i][1]<B[j][1]))
         5.1.1. C[k][0] = A[i][0];
         5.1.2. C[k][1] = A[i][1];

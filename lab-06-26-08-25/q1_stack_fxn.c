@@ -5,12 +5,12 @@
 
 int stack[100], top = -1;
 
-int isEmpty() {
+void isEmpty() {
     if (top == -1) {
         printf("Stack is empty\n");
-        return 1;
+    } else {
+        printf("Stack is not empty\n");
     }
-    return 0;
 }
 
 int isFull() {

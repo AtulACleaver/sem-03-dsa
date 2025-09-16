@@ -39,6 +39,11 @@ int isBalanced(char *expr_5339) {
     return top == -1;
 }
 
+// Output example
+// Input: {[]}
+// Output: YES
+
+
 int main() {
     char expr_5339[MAX];
     printf("Enter an expression: ");

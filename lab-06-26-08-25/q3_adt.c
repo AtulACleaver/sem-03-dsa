@@ -74,3 +74,7 @@ int main() {
 
     return 0;
 }
+
+// Example output
+// input: push(5), push(10), push(3)
+// output: Max: 10
