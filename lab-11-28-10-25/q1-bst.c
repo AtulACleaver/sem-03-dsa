@@ -50,6 +50,10 @@ struct BSTNode* insert(struct BSTNode* root_5339, int value_5339) {
     return root_5339;
 }
 
+// Example input output
+// Input: 5, 3, 7, 2, 4, 6, 8
+// Output: Inorder: 2 3 4 5 6 7 8
+
 // Function to delete a value from the BST
 struct BSTNode* delete(struct BSTNode* root_5339, int value_5339) {
     if (root_5339 == NULL) {
@@ -84,6 +88,11 @@ struct BSTNode* delete(struct BSTNode* root_5339, int value_5339) {
     return root_5339;
 }
 
+// Example input output
+// Input: 5, 3, 7, 2, 4,
+// Delete: 3
+// Output: Inorder: 2 4 5 7
+
 // Function for inorder traversal of the BST (iterative)
 void inorderTraversal(struct BSTNode* root_5339) {
     struct BSTNode* stack_5339[100];
@@ -101,6 +110,11 @@ void inorderTraversal(struct BSTNode* root_5339) {
     }
 }
 
+// Example input output
+// Input: 5, 3, 7, 2, 4,
+// Output: Inorder: 2 3 4 5 6 7 8
+
+
 void preorderTraversal(struct BSTNode* root_5339){
     struct BSTNode* stack_5339[100];
     int top_5339 = -1;
@@ -117,7 +131,10 @@ void preorderTraversal(struct BSTNode* root_5339){
     }
 }
 
-// (Optional) iterative postorder can be added similarly if needed
+// Example input output
+// Input: 5, 3, 7, 2, 4,
+// Output: Preorder: 5 3 2 4 7
+
 
 int main() {
     struct BSTNode* root_5339 = NULL;
